@@ -1,11 +1,12 @@
 #Script de estadísticas
 #from menu.API import paises_lista
 from funciones_ordenamiento import ordenar_paises
+from API import paises_lista
 # País con mayor y menor población
 def mayor_menor_poblacion(paises):
     lista=ordenar_paises(paises,"poblacion","ascendente")
-    print(f"País con mayor población en el mundo: {lista[-1]}")
-    print(f"País con menor población en el mundo: {lista[0]}")
+    print(f"País con menor población en el mundo: {lista[-1]}")
+    print(f"País con mayor población en el mundo: {lista[0]}")
 
 # Promedio de población o superficie
 def funcion_promedio(paises,valor):
