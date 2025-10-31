@@ -1,5 +1,6 @@
 import requests
 import csv
+import os
 URL="https://restcountries.com/v3.1/all?fields=name,population,area,continents"
 
 def paises_lista():
@@ -41,7 +42,8 @@ def paises_csv(lista_paises):
 
 
 paises_data=paises_lista()
-paises_csv(paises_data)
+if os.path.exists("paises.csv"):
+    paises_csv(paises_data)
 
 
 
